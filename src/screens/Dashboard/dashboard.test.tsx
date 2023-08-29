@@ -23,10 +23,9 @@ describe("Teste de Integração - Screen: Dashboard", () => {
 
     render(<Dashboard />);
 
-    const cityName = await waitFor(() => screen.findByText(/rio do sul/i));
-    expect(cityName).toBeTruthy();
+    await waitFor(() => expect(screen.findByText(/rio do sul/i, {}, { timeout: 3000 })).toBeTruthy());
   });
-
+  
   it("should be render the weather of another city", async () => {
     jest.spyOn(api, 'get')
       .mockResolvedValueOnce({ data: mockWeatherAPIResponse })
