@@ -15,19 +15,26 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.renanbonassa.iweather"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#13131A"
-      }
+      },
+      "package": "com.renanbonassa.iweather"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "experiments": {
       "tsconfigPaths": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7ae591cf-93ce-47bf-8175-d5720c4e6364"
+      }
     }
   }
 }
